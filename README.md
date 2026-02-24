@@ -5,6 +5,7 @@ A modern e-commerce platform for traditional silk sarees and ethnic wear, offeri
 ## Features
 
 - 🎨 Theme customization with dark/light mode support
+- 🔍 Desktop search bar in navbar for quick product searches
 - 🛍️ Product categorization and filtering
 - 🔐 User authentication and authorization
 - 📱 Responsive design for all devices
@@ -59,6 +60,16 @@ A modern e-commerce platform for traditional silk sarees and ethnic wear, offeri
    ```
 
 The application will be available at `[http://localhost:5173](https://tulasi-silks.vercel.app/)`.
+
+### Running Tests
+
+The project uses Vitest and Testing Library for component testing:
+
+```bash
+npm run test           # Run all tests
+npm run test:watch    # Run tests in watch mode
+npm run test:coverage # Generate coverage report
+```
 
 ## Project Structure
 

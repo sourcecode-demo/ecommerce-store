@@ -12,12 +12,16 @@ Tulasi Silks is a modern e-commerce platform for traditional silk sarees and eth
 - **Routing**: React Router DOM v6
 - **Forms**: React Hook Form + Zod
 - **Image Management**: Cloudinary
+- **Testing**: Vitest + Testing Library + Jest DOM
 
 ## Build & Run Commands
 - **Start Development Server**: `npm run dev` (Runs on port 5173 by default)
 - **Build for Production**: `npm run build`
 - **Preview Production Build**: `npm run preview`
 - **Lint Code**: `npm run lint`
+- **Run Tests**: `npm run test` (Vitest + Testing Library)
+- **Watch Mode Tests**: `npm run test:watch`
+- **Coverage Report**: `npm run test:coverage`
 
 ## Code Style & Conventions
 
@@ -41,6 +45,13 @@ Tulasi Silks is a modern e-commerce platform for traditional silk sarees and eth
 - Use `React Query` for server state (fetching products, categories).
 - Use `Context` for global UI state (Theme, Auth).
 - Avoid Redux unless complexity demands it.
+
+### Testing
+- Use **Vitest** for unit and component tests.
+- Use **Testing Library** for component testing (queries, events, assertions).
+- Use **jest-dom** for extended matchers (e.g., `toBeInTheDocument()`).
+- Collocate test files next to components (e.g., `Component.tsx` and `Component.test.tsx`).
+- Focus on user behavior and integration rather than implementation details.
 
 ## Workflow Guidelines
 

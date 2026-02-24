@@ -1,11 +1,27 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ShoppingBag, Search, User, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+/**
+ * Navbar component displaying the application header.
+ * Features desktop navigation links, a centered search bar that navigates to /shop?search=[query],
+ * user icons (cart, login), and a responsive mobile menu. Mobile menu includes navigation links,
+ * search, and cart access.
+ */
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/shop?search=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery('');
+    }
+  };
 
   return (
     <nav className="bg-white py-4 px-6 shadow-sm">
@@ -32,11 +48,27 @@ const Navbar = () => {
             </Link>
           </div>
 
+          {/* Desktop Search Bar */}
+          <form onSubmit={handleSearch} className="hidden md:flex items-center">
+            <div className="relative">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search for sarees..."
+                className="w-72 h-10 pl-4 pr-10 border border-gray-300 rounded-full text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-saree-gold focus:ring-1 focus:ring-saree-gold transition-colors"
+              />
+              <button
+                type="submit"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-saree-gold transition-colors"
+              >
+                <Search size={18} />
+              </button>
+            </div>
+          </form>
+
           {/* Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-saree-gold transition-colors">
-              <Search size={20} />
-            </button>
             <Link to="/cart" className="text-gray-700 hover:text-saree-gold transition-colors relative">
               <ShoppingBag size={20} />
               <span className="absolute -top-1 -right-1 bg-saree-maroon text-white rounded-full w-4 h-4 flex items-center justify-center text-xs">
