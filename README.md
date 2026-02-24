@@ -10,6 +10,7 @@ A modern e-commerce platform for traditional silk sarees and ethnic wear, offeri
 - 📱 Responsive design for all devices
 - 🎯 Admin dashboard for product management
 - 🖼️ Cloudinary integration for image uploads
+- 🔍 Navbar center search input (desktop) with quick navigation to shop results
 - 🚀 Fast and optimized performance
 
 ## Tech Stack
