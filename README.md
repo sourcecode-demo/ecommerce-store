@@ -10,6 +10,7 @@ A modern e-commerce platform for traditional silk sarees and ethnic wear, offeri
 - 📱 Responsive design for all devices
 - 🎯 Admin dashboard for product management
 - 🖼️ Cloudinary integration for image uploads
+- 🔍 Persistent navbar search bar for quick product discovery
 - 🚀 Fast and optimized performance
 
 ## Tech Stack
@@ -59,6 +60,15 @@ A modern e-commerce platform for traditional silk sarees and ethnic wear, offeri
    ```
 
 The application will be available at `[http://localhost:5173](https://tulasi-silks.vercel.app/)`.
+
+## Available Commands
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run test` - Run tests with Vitest
+- `npm run test:watch` - Run tests in watch mode
 
 ## Project Structure
 

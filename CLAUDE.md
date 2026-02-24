@@ -18,6 +18,8 @@ Tulasi Silks is a modern e-commerce platform for traditional silk sarees and eth
 - **Build for Production**: `npm run build`
 - **Preview Production Build**: `npm run preview`
 - **Lint Code**: `npm run lint`
+- **Run Tests**: `npm run test` (Vitest with @testing-library/react)
+- **Watch Mode Tests**: `npm run test:watch`
 
 ## Code Style & Conventions
 
