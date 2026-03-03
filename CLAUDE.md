@@ -18,6 +18,8 @@ Tulasi Silks is a modern e-commerce platform for traditional silk sarees and eth
 - **Build for Production**: `npm run build`
 - **Preview Production Build**: `npm run preview`
 - **Lint Code**: `npm run lint`
+- **Run Tests**: `npm run test` (Vitest + React Testing Library)
+- **Run Tests with Coverage**: `npm run test:coverage`
 
 ## Code Style & Conventions
 
@@ -41,6 +43,12 @@ Tulasi Silks is a modern e-commerce platform for traditional silk sarees and eth
 - Use `React Query` for server state (fetching products, categories).
 - Use `Context` for global UI state (Theme, Auth).
 - Avoid Redux unless complexity demands it.
+
+### Testing
+- **Framework**: Vitest + React Testing Library
+- **Location**: Test files co-located with components (`ComponentName.test.tsx`)
+- **Approach**: Test user interactions and component behavior, not implementation details.
+- **Coverage**: Aim for meaningful test coverage of critical user flows.
 
 ## Workflow Guidelines
 
